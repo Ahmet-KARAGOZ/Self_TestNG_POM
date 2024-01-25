@@ -13,16 +13,16 @@ import java.util.Locale;
 public class C04_DepensOnMethods {
 	List<WebElement> bulunanUrunElementleriList;
 
-	@Test(priority = 1)
-	public void testOtomasyonAnaSayfaTesti(){
+	@Test
+	public void a(){
 		Driver.getDriver().get("https://www.testotomasyonu.com/");
 		String expURL = "https://www.testotomasyonu.com/";
 		String actURL = Driver.getDriver().getCurrentUrl();
 		Assert.assertEquals(actURL,expURL);
 	}
 
-	@Test (priority = 2)
-	public void aramaTesti(){
+	@Test (dependsOnMethods = "a")
+	public void b(){
 		WebElement aramaKutusu = Driver.getDriver().findElement(By.id("global-search"));
 		aramaKutusu.sendKeys("phone" , Keys.ENTER);
 
@@ -31,8 +31,8 @@ public class C04_DepensOnMethods {
 
 
 	}
-	@Test (priority = 3)
-	public void ilkUrunIsimTesti(){
+	@Test (dependsOnMethods = "b")
+	public void c(){
 		bulunanUrunElementleriList.get(0).click();
 		WebElement urunIsmi = Driver.getDriver().findElement(By.xpath("//div[@class=' heading-sm mb-4']"));
 		String expUrunIsimIcerigi = "phone";
