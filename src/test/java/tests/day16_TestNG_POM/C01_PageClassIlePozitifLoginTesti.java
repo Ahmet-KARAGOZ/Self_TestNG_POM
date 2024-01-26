@@ -1,8 +1,10 @@
 package tests.day16_TestNG_POM;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TestOtomasyonPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 /*
 1- https://www.testotomasyonu.com/ anasayfasina gidin
@@ -20,5 +22,13 @@ public class C01_PageClassIlePozitifLoginTesti {
 		Driver.getDriver().get("https://www.testotomasyonu.com/");
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();
 		testOtomasyonPage.accountLinki.click();
+
+		testOtomasyonPage.emailKutusu.sendKeys("wise@gmail.com");
+		testOtomasyonPage.passwordKutusu.sendKeys("12345");
+		testOtomasyonPage.loginButonu.click();
+		Assert.assertTrue(testOtomasyonPage.logoutButonu.isDisplayed());
+
+		ReusableMethods.bekle(2);
+		Driver.quitDriver();
 	}
 }

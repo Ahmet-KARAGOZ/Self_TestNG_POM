@@ -2,6 +2,7 @@ package tests.day15_TestNG_POM;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,12 +14,15 @@ import java.util.Locale;
 public class C04_DepensOnMethods {
 	List<WebElement> bulunanUrunElementleriList;
 
+
 	@Test
 	public void a(){
 		Driver.getDriver().get("https://www.testotomasyonu.com/");
 		String expURL = "https://www.testotomasyonu.com/";
 		String actURL = Driver.getDriver().getCurrentUrl();
 		Assert.assertEquals(actURL,expURL);
+
+
 	}
 
 	@Test (dependsOnMethods = "a")
