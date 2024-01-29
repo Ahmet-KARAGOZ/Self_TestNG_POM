@@ -27,9 +27,21 @@ public class C05_WebuniversityTest {
 		WebuniversityPage webuniversityPage = new WebuniversityPage();
 
 		JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-		//jse.executeScript("arguments[0].scrollIntoView(true);",webuniversityPage.loginPortalYaziElementi);
+		jse.executeScript("arguments[0].scrollIntoView();",webuniversityPage.loginPortalYaziElementi);
 
-		webuniversityPage.loginPortalYaziElementi.click();
+		//login portal yazısına kadar scrooll yaptığımızda yazı sayfanın üstündeki kırmızı bantın altında kaldığından
+		//dolayı sonrasında clik yapamıyorduk. Bizde CONTACT US yazsına kadar yukarıya alıp her ekranda görünür olmasını sağladık.
+		//jse.executeScript("arguments[0].scrollIntoView();",webuniversityPage.contactUsYaziElementi);
+
+		//Intercept hatasından dolayı click yapamadığımız noktaya javaScript executer ile clik yapabildik.
+		jse.executeScript("arguments[0].click();", webuniversityPage.loginPortalYaziElementi);
+
+
+
+
+		//
+
+		//webuniversityPage.loginPortalYaziElementi.click();
 
 		ReusableMethods.titleIleWindowDegistir("WebDriver | Login Portal" , Driver.getDriver());
 		Faker faker = new Faker();

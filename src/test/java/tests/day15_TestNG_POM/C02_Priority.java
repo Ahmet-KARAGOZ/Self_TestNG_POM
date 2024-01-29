@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.List;
 import java.util.Locale;
@@ -22,14 +23,17 @@ public class C02_Priority {
 
 	@Test(priority = 1)
 	public void testOtomasyonAnaSayfaTesti(){
+
 		Driver.getDriver().get("https://www.testotomasyonu.com/");
 		String expURL = "https://www.testotomasyonu.com/";
 		String actURL = Driver.getDriver().getCurrentUrl();
 		Assert.assertEquals(actURL,expURL);
 	}
 
-	@Test (priority = 2)
+	@Test (priority = 2 )
 	public void aramaTesti(){
+
+
 		WebElement aramaKutusu = Driver.getDriver().findElement(By.id("global-search"));
 		aramaKutusu.sendKeys("phone" , Keys.ENTER);
 
