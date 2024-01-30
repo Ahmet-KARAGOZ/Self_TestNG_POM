@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import pages.TestOtomasyonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.security.Key;
 
@@ -21,6 +22,7 @@ public class C05_Assertions {
 		Assert.assertEquals(actUrl,expUrl);
 
 		testOtomasyonPage.aramaKutusu.sendKeys("phone" , Keys.ENTER);
+
 
 		int expMinUrunSayisi = 3;
 		int actUrunSayisi = testOtomasyonPage.bulunanUrunElementleriList.size();
