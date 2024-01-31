@@ -4,8 +4,8 @@
 <suite name="package calistirma">
     <test name="day ve day 16">
         <packages>
-            <package name="tests.day15_TestNG_POM"></package>
-            <package name="tests.day16_TestNG_POM"></package>
+            <package name="tests.day19_TestNG_Reports"></package>
+
         </packages>
     </test>
 </suite>
