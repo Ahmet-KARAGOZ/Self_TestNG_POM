@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- day17 package ı paralel testing kullanarak 2 driver kullanarak calıştırın -->
+
+<suite name="day17 class level paralel calıştırma" parallel="classes" thread-count="2" verbose="4">
+    <test name="class level paralel calıştırma">
+        <packages>
+            <package name="tests.day17_TestNG_POM"></package>
+        </packages>
+    </test>
+</suite>

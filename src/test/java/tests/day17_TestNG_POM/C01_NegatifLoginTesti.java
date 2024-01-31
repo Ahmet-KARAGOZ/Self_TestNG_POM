@@ -15,7 +15,7 @@ import utilities.Driver;
 //4- Login butonuna basarak login olun
 //5- Basarili olarak giris yapilamadigini test edin
 public class C01_NegatifLoginTesti {
-	@Test
+	@Test(groups = {"smoke" , "E2E" , "regression"})
 public void gecersizPasswordTesti(){
 		Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();
@@ -42,7 +42,7 @@ public void gecersizPasswordTesti(){
 		Driver.quitDriver();
 	}
 
-	@Test
+	@Test (groups = "smoke")
 	public void gecersizEmailgecersizPasswordTesti(){
 		Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();
