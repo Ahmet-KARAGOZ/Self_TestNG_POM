@@ -15,7 +15,7 @@ import utilities.ReusableMethods;
  */
 
 public class C02_PageClassKullanimi {
-	@Test
+	@Test(groups = {"smoke" , "regression"})
 	public void aramaTesti(){
 		Driver.getDriver().get("https://www.testotomasyonu.com/");
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();

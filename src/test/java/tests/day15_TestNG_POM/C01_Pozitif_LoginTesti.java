@@ -16,7 +16,7 @@ import utilities.TestBase;
  */
 
 public class C01_Pozitif_LoginTesti extends TestBase {
-	@Test
+	@Test(groups = {"smoke" , "e2e" , "regression"})
 	public void pozitifLogin(){
 		driver.get("https://www.testotomasyonu.com/");
 		driver.findElement(By.xpath("(//a[@class='e-cart'])[1]")).click();

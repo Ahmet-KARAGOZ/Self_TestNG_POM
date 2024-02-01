@@ -17,7 +17,7 @@ import utilities.ReusableMethods;
 
 
 public class C01_PageClassIlePozitifLoginTesti {
-	@Test
+	@Test(groups = "smoke")
 	public void pozitifLoginTesti(){
 		Driver.getDriver().get("https://www.testotomasyonu.com/");
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();

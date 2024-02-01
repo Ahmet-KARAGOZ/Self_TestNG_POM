@@ -14,7 +14,7 @@ import utilities.ReusableMethods;
  */
 
 public class C03_facebookNegatifLoginTesti {
-	@Test
+	@Test(groups = {"smoke" , "e2e"})
 	public void facebookNegatifLoginTesti(){
 		Driver.getDriver().get("https://www.facebook.com/");
 		FacebookPage facebookPage = new FacebookPage();
