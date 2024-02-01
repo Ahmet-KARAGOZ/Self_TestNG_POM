@@ -9,7 +9,7 @@ import utilities.ReusableMethods;
 import utilities.TestBase;
 
 public class C01_testNG_ilkTest extends TestBase {
-	@Test(groups = "regression")
+	@Test
 	public void test01(){
 		driver.get("https://www.testotomasyonu.com");
 		WebElement aramaKutusu = driver.findElement(By.id("global-search"));

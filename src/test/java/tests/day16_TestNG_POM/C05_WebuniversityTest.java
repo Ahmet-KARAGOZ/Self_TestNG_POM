@@ -20,7 +20,7 @@ import utilities.ReusableMethods;
 //10.Ilk sayfaya donuldugunu test edin
 
 public class C05_WebuniversityTest {
-	@Test
+	@Test(groups = {"smoke" , "e2e" , "regression"})
 	public void webuniversityTest(){
 		Driver.getDriver().get("https://webdriveruniversity.com/");
 		String ilkSayfaWHD = Driver.getDriver().getWindowHandle();

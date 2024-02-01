@@ -14,7 +14,7 @@ import utilities.ReusableMethods;
 // 6- Basarili olarak giris yapilabildigini test edin
 
 public class C06_ConfigurationPropertiesDosyasiKullanma {
-	@Test
+	@Test(groups = "regression")
 	public void pozitifLoginTesti(){
 		Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();
