@@ -1,5 +1,6 @@
 package tests.day20_dataProvider_crossBrowserTest;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,7 +19,8 @@ public class C02_DataProviderileNegatifLoginTesti {
 										{"orkong@tmail.com","122334"},
 										{"fatih@hotmail.com","454545"},
 										{"arzu@senmail.com","676767"},
-										{"mehmet@mynet.com","878987"}     };
+										{"mehmet@mynet.com","878987"},
+										{"wise@gmail.com" , "12345"}};
 
 		return emailVeSifreler;
 	}
@@ -34,7 +36,12 @@ public class C02_DataProviderileNegatifLoginTesti {
 		testOtomasyonPage.passwordKutusu.sendKeys(password);
 		testOtomasyonPage.loginButonu.click();
 
-		Assert.assertTrue(testOtomasyonPage.emailKutusu.isDisplayed());
+		try {
+			Assert.assertTrue(testOtomasyonPage.emailKutusu.isDisplayed());
+		} catch (NoSuchElementException e) {
+			testOtomasyonPage.logoutButonu.click();
+			Assert.assertTrue(false);
+		}
 
 		Driver.quitDriver();
 

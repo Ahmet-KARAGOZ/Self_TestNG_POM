@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- day20 crossbrowser packageındaki tüm classları hem chrome hemide firefoxta çalıştırın -->
+
+<suite name="CrossBrowser testler">
+
+    <test name="chrome ile çalışacaklar">
+        <parameter name="crossBrowser" value="chrome"></parameter>
+
+        <packages>
+            <package name="tests.day20_CrossBrowserCalısacakTestler"></package>
+        </packages>
+
+    </test>
+
+    <test name="firefox ile çalışacak testler">
+        <parameter name="crossBrowser" value="firefox"></parameter>
+        <packages>
+            <package name="tests.day20_CrossBrowserCalısacakTestler"></package>
+        </packages>
+
+    </test>
+
+
+</suite>
