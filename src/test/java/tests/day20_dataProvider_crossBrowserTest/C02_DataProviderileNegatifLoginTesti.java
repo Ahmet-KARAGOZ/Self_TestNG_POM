@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.TestOtomasyonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class C02_DataProviderileNegatifLoginTesti {
 
@@ -31,6 +32,7 @@ public class C02_DataProviderileNegatifLoginTesti {
 		Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 
 		TestOtomasyonPage testOtomasyonPage = new TestOtomasyonPage();
+		ReusableMethods.bekle(2);
 		testOtomasyonPage.accountLinki.click();
 		testOtomasyonPage.emailKutusu.sendKeys(email);
 		testOtomasyonPage.passwordKutusu.sendKeys(password);
