@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="cross browser calistirma testleri">
+
+    <test name="chrome ile calisacaklar">
+        <parameter name="crossBrowser" value="chrome"></parameter>
+        <classes>
+            <class name="tests.myDay.C01_DataProviderCalisma"></class>
+        </classes>
+    </test>
+
+
+    <test name="firefox ile calisacaklar">
+        <parameter name="crossBrowser" value="firefox"></parameter>
+        <classes>
+            <class name="tests.myDay.C01_DataProviderCalisma"></class>
+        </classes>
+    </test>
+
+</suite>

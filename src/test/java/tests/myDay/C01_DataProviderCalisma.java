@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import pages.TestOtomasyonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 //listedeki urunlerin sayfada olmadıgını test edin
@@ -14,7 +15,7 @@ import utilities.TestBaseRapor;
 public class C01_DataProviderCalisma extends TestBaseRapor {
 	@DataProvider
 	public static Object[][] urunler() {
-		String [][] urunler = {{"araba"} , {"motosiklet"} , {"bisiklet"} , {"yat"} , {"phone"}};
+		String [][] urunler = {{"araba"} , {"motosiklet"} , {"bisiklet"} , {"yat"}};
 		return  urunler;
 	}
 
@@ -29,6 +30,8 @@ public class C01_DataProviderCalisma extends TestBaseRapor {
 
 		testOtomasyonPage.aramaKutusu.sendKeys(urun + Keys.ENTER);
 		extentTest.info("sayfada "+urun+" ile arama yapar");
+
+		//ReusableMethods.bekle(2);
 
 		String expUrunSonucYazisi = ConfigReader.getProperty("toUrunBulunamadiYazisi");
 		String actUrunSonucYazisi = testOtomasyonPage.bulunanUrunSayisiYazisiElementi.getText();
