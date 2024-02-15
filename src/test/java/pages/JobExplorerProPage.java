@@ -25,8 +25,11 @@ public class JobExplorerProPage {
 	@FindBy(xpath = "//*[text()='New users']") public WebElement adminDashboardNewUsersText;
 	@FindBy(xpath = "//*[text()='Users roles']") public WebElement adminDashboardUsersRolesText;
 	@FindBy(xpath = "//*[text()='Registered users']") public WebElement adminDashboardRegisteredUsersText;
+	@FindBy(xpath = "//input[@name='remember']") public WebElement adminDashboardBeniHatirlaCheckBox;
+	@FindBy(xpath = "//label[@for='remember']") public WebElement adminDashboardBeniHatirlaYazisi;
 
 	//US21 için alınan locate lerin sonu
+
 
 
 
