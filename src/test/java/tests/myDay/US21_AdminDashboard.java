@@ -19,19 +19,19 @@ public class US21_AdminDashboard extends TestBaseRapor {
 
 		JobExplorerProPage jobExplorerProPage = new JobExplorerProPage();
 
-		softAssert.assertTrue(jobExplorerProPage.emailBoxAdmin.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.emailBoxAdmin.isDisplayed() , "E-mail kutusu görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi e-mail kutusunun görünür oldugunu test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.passwordBoxAdmin.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.passwordBoxAdmin.isDisplayed() , "Password kutusu görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi password kutusunun görünür oldugunu test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.signinBoxAdmin.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.signinBoxAdmin.isDisplayed() , "Giris butonu görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi Giriş butonunun görünür oldugunu test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardBeniHatirlaCheckBox.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardBeniHatirlaCheckBox.isDisplayed() , "Beni hatirla checkboxi görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi Beni Hatırla CheckBox görünürlüğünü test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardBeniHatirlaYazisi.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardBeniHatirlaYazisi.isDisplayed() , "Beni hatirla yazisi görüntülenemdi." );
 		extentTest.pass("Admin Login sayfasi Beni Hatırla Yazısının görünür oldugunu test eder.");
 
 		softAssert.assertAll();
@@ -84,11 +84,11 @@ public class US21_AdminDashboard extends TestBaseRapor {
 		extentTest.info("Giriş Butonuna tıklanır.");
 
 		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardPlatformStatisticsText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardPlatformStatisticsText.isDisplayed() , "Admin Dashboard görüntülenemedi.");
 		extentTest.pass("Admin Dashboard sayfasında olunduğu test edilir.");
 		softAssert.assertAll();
 
-		Driver.quitDriver();
+		//Driver.quitDriver();
 		extentTest.info("Sayfayı kapatır.");
 	}
 
@@ -109,26 +109,26 @@ public class US21_AdminDashboard extends TestBaseRapor {
 		extentTest.info("Giriş Butonuna tıklanır.");
 
 		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardLast24HoursText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardLast24HoursText.isDisplayed() , "Last 24 Hours paneli görünütülenemdi.");
 		extentTest.pass("Last 24 Hours bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardPaymentsText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardPaymentsText.isDisplayed() , "Payments paneli görünütülenemdi.");
 		extentTest.pass("Payments bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardContentText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardContentText.isDisplayed() , "Content paneli görünütülenemdi.");
 		extentTest.pass("Content bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardNewUsersText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardNewUsersText.isDisplayed() , "New users paneli görünütülenemdi.");
 		extentTest.pass("New Users bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardUsersRolesText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardUsersRolesText.isDisplayed() , "User roles paneli görünütülenemdi.");
 		extentTest.pass("User roles bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardRegisteredUsersText.isDisplayed());
+		softAssert.assertTrue(jobExplorerProPage.adminDashboardRegisteredUsersText.isDisplayed() , "Registered users paneli görünütülenemdi.");
 		extentTest.pass("Registered users bilgilerinin görünürlüğü test edilir.");
 		softAssert.assertAll();
 
-		Driver.quitDriver();
+		//Driver.quitDriver();
 		extentTest.info("Sayfayı kapatır.");
 
 
