@@ -39,31 +39,7 @@ public class US21_AdminDashboard extends TestBaseRapor {
 		//Driver.quitDriver();
 		extentTest.info("Sayfayı kapatır.");
 
-		/*
 
-		Assert.assertTrue(jobExplorerProPage.adminDashboardPlatformStatisticsText.isDisplayed());
-		Assert.assertTrue(jobExplorerProPage.adminDashboardLast24HoursText.isDisplayed());
-		Assert.assertTrue(jobExplorerProPage.adminDashboardPaymentsText.isDisplayed());
-		Assert.assertTrue(jobExplorerProPage.adminDashboardContentText.isDisplayed());
-		Assert.assertTrue(jobExplorerProPage.adminDashboardNewUsersText.isDisplayed());
-		Assert.assertTrue(jobExplorerProPage.adminDashboardUsersRolesText.isDisplayed());
-		Assert.assertTrue(jobExplorerProPage.adminDashboardRegisteredUsersText.isDisplayed());
-
-		 */  //Assertler
-
-		/*
-		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardPlatformStatisticsText.isDisplayed());
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardLast24HoursText.isDisplayed());
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardPaymentsText.isDisplayed());
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardContentText.isDisplayed());
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardNewUsersText.isDisplayed());
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardUsersRolesText.isDisplayed());
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardRegisteredUsersText.isDisplayed());
-
-		softAssert.assertAll();
-
-		 */ //SoftAssertler
 
 	}
 
