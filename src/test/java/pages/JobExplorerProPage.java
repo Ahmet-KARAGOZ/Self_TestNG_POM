@@ -58,6 +58,31 @@ public class JobExplorerProPage {
 	@FindBy(xpath = "(//button[@type='submit'])[2]") public WebElement editCategorySaveButton;
 	@FindBy(xpath = "//input[@value='Yes, Delete it!']") public WebElement categorySilmePopupOnayButton;
 
+	//US31 için locateler
+	@FindBy(xpath = "//span[@class='icon voyager-company']") public WebElement leftMenuCompaniesButtonAdmin;
+	@FindBy(xpath = "//div[@class='show-res']") public WebElement companiesShowingEntryText;
+	@FindBy(xpath = "//tbody/tr") public List<WebElement> companiesTabloSatirlarList;
+	@FindBy(xpath = "//a[@rel='next']") public WebElement companiesNextPageButton;
+	@FindBy(xpath = "//a[@class='btn btn-success btn-add-new']") public WebElement companiesAddNewButonu;
+	@FindBy(xpath = "//input[@name='user_id']") public WebElement addCompanyUserIdBox;
+	@FindBy(xpath = "//input[@name='name']") public WebElement addCompanyNameBox;
+	@FindBy(xpath = "//input[@name='slug']") public WebElement addCompanySlugBox;
+	@FindBy(xpath = "//input[@name='hq']") public WebElement addCompanyHqBox;
+	@FindBy(xpath = "//input[@name='website_url']") public WebElement addCompanyWebUrlBox;
+	@FindBy(xpath = "//input[@name='email']") public WebElement addCompanyEmailBox;
+	@FindBy(xpath = "//input[@name='description']") public WebElement addCompanyDescriptionBox;
+	@FindBy(xpath = "(//button[@type='submit'])[2]") public WebElement addCompanySaveButton;
+	@FindBy(xpath = "//select[@id='search_key']") public WebElement companyAranacakBaslikDropdown;
+	@FindBy(xpath = "//select[@id='filter']") public WebElement companyAramaEsitlemeContainsDropDown;
+	@FindBy(xpath = "//input[@name='s']") public WebElement companyAramaSearchTextBox;
+	@FindBy(xpath = "//button[@class='btn btn-info btn-lg']") public WebElement companyAramaSearchIcon;
+	@FindBy(xpath = "//tbody/tr/td[4]") public List<WebElement> companiesNameList;
+	@FindBy(xpath = "//input[@value='Yes, Delete it!']") public WebElement companySilmePopupOnayButton;
+
+
+
+
+
 
 
 
