@@ -39,10 +39,26 @@ public class JobExplorerProPage {
 
 	//US 25 Kendi aldığım locateler
 	@FindBy(xpath = "//span[@class='icon voyager-categories']") public WebElement leftMenuCategoriesIconuAdmin;
+	@FindBy(xpath = "//h1[@class='page-title']") public WebElement categoiresSayfaBasligiText;
 	@FindBy(xpath = "//a[@rel='next']") public WebElement categoriesNextPageIconu;
 	@FindBy(xpath = "//div[@class='show-res']") public WebElement categoriesSonucYazisi;
 
 	@FindBy(xpath = "//tbody/tr") public List<WebElement> categoriesTabloSatirlarListesi;
+	@FindBy(xpath = "//a[@class='btn btn-success btn-add-new']") public WebElement categoriesAddNewButton;
+	@FindBy(xpath = "//input[@name='name']") public WebElement addCategoryNameBox;
+	@FindBy(xpath = "//input[@name='slogan']") public WebElement addCategorySloganBox;
+	@FindBy(xpath = "//input[@name='description']") public WebElement addCategoryDescriptionBox;
+	@FindBy(xpath = "(//button[@type='submit'])[2]") public WebElement addCategorySaveButton;
+
+	@FindBy(xpath = "//tbody/tr/td[2]") public List<WebElement> categoriesTabloIsimList;
+	@FindBy(xpath = "(//div[@class='panel-body'])[5]") public WebElement viewingCategoryNameText;
+	@FindBy(xpath = "//input[@name='name']") public WebElement editCategoryNameBox;
+	@FindBy(xpath = "//input[@name='slogan']") public WebElement editCategorySloganBox;
+	@FindBy(xpath = "//input[@name='description']") public WebElement editCategoryDescritionBox;
+	@FindBy(xpath = "(//button[@type='submit'])[2]") public WebElement editCategorySaveButton;
+	@FindBy(xpath = "//input[@value='Yes, Delete it!']") public WebElement categorySilmePopupOnayButton;
+
+
 
 
 
