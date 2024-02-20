@@ -1,12 +1,10 @@
 package tests.myDay;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import pages.JobExplorerProPage;
+import pages.AdminPanelPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.ReusableMethods;
 import utilities.TestBaseRapor;
 
 public class US21_AdminDashboard extends TestBaseRapor {
@@ -16,22 +14,22 @@ public class US21_AdminDashboard extends TestBaseRapor {
 		Driver.getDriver().get(ConfigReader.getProperty("adminUrl"));
 		extentTest.info("Jobexplorerpro Admin Login sayfasına gider.");
 		SoftAssert softAssert = new SoftAssert();
+		AdminPanelPage adminPanelPage = new AdminPanelPage();
 
-		JobExplorerProPage jobExplorerProPage = new JobExplorerProPage();
 
-		softAssert.assertTrue(jobExplorerProPage.emailBoxAdmin.isDisplayed() , "E-mail kutusu görüntülenemdi.");
+		softAssert.assertTrue(adminPanelPage.emailBoxAdmin.isDisplayed() , "E-mail kutusu görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi e-mail kutusunun görünür oldugunu test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.passwordBoxAdmin.isDisplayed() , "Password kutusu görüntülenemdi.");
+		softAssert.assertTrue(adminPanelPage.passwordBoxAdmin.isDisplayed() , "Password kutusu görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi password kutusunun görünür oldugunu test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.signinBoxAdmin.isDisplayed() , "Giris butonu görüntülenemdi.");
+		softAssert.assertTrue(adminPanelPage.signinBoxAdmin.isDisplayed() , "Giris butonu görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi Giriş butonunun görünür oldugunu test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardBeniHatirlaCheckBox.isDisplayed() , "Beni hatirla checkboxi görüntülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardBeniHatirlaCheckBox.isDisplayed() , "Beni hatirla checkboxi görüntülenemdi.");
 		extentTest.pass("Admin Login sayfasi Beni Hatırla CheckBox görünürlüğünü test eder.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardBeniHatirlaYazisi.isDisplayed() , "Beni hatirla yazisi görüntülenemdi." );
+		softAssert.assertTrue(adminPanelPage.adminDashboardBeniHatirlaYazisi.isDisplayed() , "Beni hatirla yazisi görüntülenemdi." );
 		extentTest.pass("Admin Login sayfasi Beni Hatırla Yazısının görünür oldugunu test eder.");
 
 		softAssert.assertAll();
@@ -48,19 +46,20 @@ public class US21_AdminDashboard extends TestBaseRapor {
 		extentTest = extentReports.createTest("Admin Dashboard Erisim Testi", "Gecerli Kullanıcı Bilgileri ile Admin Dashboard Sayfasina Erisilebilmeli");
 		Driver.getDriver().get(ConfigReader.getProperty("adminUrl"));
 		extentTest.info("Jobexplorerpro Admin Login sayfasına gider.");
-		JobExplorerProPage jobExplorerProPage = new JobExplorerProPage();
+		AdminPanelPage adminPanelPage = new AdminPanelPage();
 
-		jobExplorerProPage.emailBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminEmail"));
+
+		adminPanelPage.emailBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminEmail"));
 		extentTest.info("Geçerli Admin E-posta bilgisi girilir.");
 
-		jobExplorerProPage.passwordBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminPassword"));
+		adminPanelPage.passwordBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminPassword"));
 		extentTest.info("Geçerli Admin password bilgisi girilir.");
 
-		jobExplorerProPage.signinBoxAdmin.click();
+		adminPanelPage.signinBoxAdmin.click();
 		extentTest.info("Giriş Butonuna tıklanır.");
 
 		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardPlatformStatisticsText.isDisplayed() , "Admin Dashboard görüntülenemedi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardPlatformStatisticsText.isDisplayed() , "Admin Dashboard görüntülenemedi.");
 		extentTest.pass("Admin Dashboard sayfasında olunduğu test edilir.");
 		softAssert.assertAll();
 
@@ -73,34 +72,34 @@ public class US21_AdminDashboard extends TestBaseRapor {
 		extentTest = extentReports.createTest("Admin Dashboard Platform Istatistikleri Görüntüleyebilme Testi", "ILgiili Platform Istatistikleri Görüntülenebilmeli");
 		Driver.getDriver().get(ConfigReader.getProperty("adminUrl"));
 		extentTest.info("Jobexplorerpro Admin Login sayfasına gider.");
-		JobExplorerProPage jobExplorerProPage = new JobExplorerProPage();
+		AdminPanelPage adminPanelPage = new AdminPanelPage();
 
-		jobExplorerProPage.emailBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminEmail"));
+		adminPanelPage.emailBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminEmail"));
 		extentTest.info("Geçerli Admin E-posta bilgisi girilir.");
 
-		jobExplorerProPage.passwordBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminPassword"));
+		adminPanelPage.passwordBoxAdmin.sendKeys(ConfigReader.getProperty("ahmetAdminPassword"));
 		extentTest.info("Geçerli Admin password bilgisi girilir.");
 
-		jobExplorerProPage.signinBoxAdmin.click();
+		adminPanelPage.signinBoxAdmin.click();
 		extentTest.info("Giriş Butonuna tıklanır.");
 
 		SoftAssert softAssert = new SoftAssert();
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardLast24HoursText.isDisplayed() , "Last 24 Hours paneli görünütülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardLast24HoursText.isDisplayed() , "Last 24 Hours paneli görünütülenemdi.");
 		extentTest.pass("Last 24 Hours bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardPaymentsText.isDisplayed() , "Payments paneli görünütülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardPaymentsText.isDisplayed() , "Payments paneli görünütülenemdi.");
 		extentTest.pass("Payments bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardContentText.isDisplayed() , "Content paneli görünütülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardContentText.isDisplayed() , "Content paneli görünütülenemdi.");
 		extentTest.pass("Content bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardNewUsersText.isDisplayed() , "New users paneli görünütülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardNewUsersText.isDisplayed() , "New users paneli görünütülenemdi.");
 		extentTest.pass("New Users bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardUsersRolesText.isDisplayed() , "User roles paneli görünütülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardUsersRolesText.isDisplayed() , "User roles paneli görünütülenemdi.");
 		extentTest.pass("User roles bilgilerinin görünürlüğü test edilir.");
 
-		softAssert.assertTrue(jobExplorerProPage.adminDashboardRegisteredUsersText.isDisplayed() , "Registered users paneli görünütülenemdi.");
+		softAssert.assertTrue(adminPanelPage.adminDashboardRegisteredUsersText.isDisplayed() , "Registered users paneli görünütülenemdi.");
 		extentTest.pass("Registered users bilgilerinin görünürlüğü test edilir.");
 		softAssert.assertAll();
 
